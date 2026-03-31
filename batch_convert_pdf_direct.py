@@ -12,6 +12,8 @@ def process_sds(pdf_path, template_path, output_path):
     rect = template_page.rect
 
     # --- Prepare Template Page 1 (Header + Footer) ---
+    ARIAL_BOLD = r'C:\Windows\Fonts\arialbd.ttf'
+    
     # Shift the template upward by 60pts so the header sits closer to the top
     header_shift = 60
     temp_doc1 = fitz.open()
@@ -20,6 +22,13 @@ def process_sds(pdf_path, template_path, output_path):
     tp1.show_pdf_page(shifted_rect, doc_template, 0)
     # Erase the auto-date/page text (originally at y=8-95, now shifted up by 60)
     tp1.draw_rect(fitz.Rect(0, 0, rect.width, 35), color=(1, 1, 1), fill=(1, 1, 1))
+    
+    # Redact the original large MSDS title (at y~20-40 after shift) and overwrite with Arial 11
+    # Original bbox from analyze_template: (35.7, 81.0, 480, 96.9)
+    # After shift of 60: y0 ~ 21, y1 ~ 37
+    tp1.draw_rect(fitz.Rect(30, 15, 560, 45), color=(1, 1, 1), fill=(1, 1, 1))
+    tp1.insert_text(fitz.Point(35.7, 35), "MATERIAL SAFETY DATA SHEET (MSDS)", fontfile=ARIAL_BOLD, fontsize=11, color=(0,0,0))
+
     # Erase placeholder body text (header ends ~85 after shift, blank from 90 down)
     tp1.draw_rect(fitz.Rect(0, 90, rect.width, rect.height), color=(1, 1, 1), fill=(1, 1, 1))
 
@@ -140,11 +149,12 @@ def process_sds(pdf_path, template_path, output_path):
                     for span in line["spans"]:
                         text = span["text"].strip()
                         if re.match(r"^SECTION \d+:", text.upper()) and span["bbox"][0] < 60:
-                            # On Page 1, any text below 78 was shifted by 12 points
-                            # On Page 2+, offset is 0
-                            actual_y_offset = (12 if page_num == 0 and span["bbox"][1] > 78 else 0)
-                            p_orig = fitz.Point(span["origin"][0], span["origin"][1] + actual_y_offset)
-                            new_page.insert_text(p_orig, text, fontname="hebo", fontsize=span["size"], color=(1, 1, 1))
+                             # On Page 1, any text below 78 was shifted by 12 points
+                             # On Page 2+, offset is 0
+                             actual_y_offset = (12 if page_num == 0 and span["bbox"][1] > 78 else 0)
+                             p_orig = fitz.Point(span["origin"][0], span["origin"][1] + actual_y_offset)
+                             # Re-render in Arial Bold 11
+                             new_page.insert_text(p_orig, text, fontfile=ARIAL_BOLD, fontsize=11, color=(1, 1, 1))
         
         # === NO MORE 1.3 & 1.4 INSERTION ===
 
