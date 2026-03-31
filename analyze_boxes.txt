@@ -1,0 +1,41 @@
+
+--- Analysis of Template Page 1 ---
+y0=8.7, y1=95.3: Page 1 of 1  Thursday, 26 March 2026
+y0=101.6, y1=119.4: MATERIAL SAFETY DATA SHEET
+y0=125.7, y1=143.5: (MSDS)
+y0=149.9, y1=167.7: 
+y0=176.3, y1=230.4: PRODUCT NAME - ACETIC ACID  CAS No.: 64-19-7
+... bottom blocks ...
+y0=8.7, y1=95.3: Page 1 of 1  Thursday, 26 March 2026
+y0=101.6, y1=119.4: MATERIAL SAFETY DATA SHEET
+y0=125.7, y1=143.5: (MSDS)
+y0=149.9, y1=167.7: 
+y0=176.3, y1=230.4: PRODUCT NAME - ACETIC ACID  CAS No.: 64-19-7
+
+--- Analysis of Merck SDS Page 1 ---
+y0=14.0, y1=38.3: 
+y0=38.4, y1=50.4: 
+y0=78.5, y1=129.8: SAFETY DATA SHEET  according to Regulation (EC) No. 1907/2006
+y0=100.7, y1=120.1: Version 6.9  Revision Date 20.05.2024
+y0=118.2, y1=157.7: Print Date 21.05.2024  GENERIC EU MSDS - NO COUNTRY SPECIFIC DATA - NO OEL DATA 
+y0=163.8, y1=192.6: 1.1  Product identifiers Product name  : Half FRASER (Demi FRASER) broth (base)
+y0=192.7, y1=258.5: with antibiotics acc. ISO 11290 GranuCult®    Product Number  : 1.00025  Catalog
+y0=264.6, y1=276.7: UFI  : 5DU2-V6J1-D99J-HY1J
+y0=282.7, y1=294.8: REACH No.  : This product is a mixture. REACH Registration Number see
+y0=295.0, y1=319.2: section 3.
+y0=325.2, y1=337.3: 1.2  Relevant identified uses of the substance or mixture and uses advised again
+y0=343.3, y1=367.6: Identified uses  : Reagent for analysis  Uses advised against  : This product is
+y0=373.7, y1=385.8: 1.3  Details of the supplier of the safety data sheet
+y0=391.8, y1=403.9: Company  : Sigma-Aldrich Chemical Pvt Limited
+y0=403.9, y1=471.7: Industrial Area, Anekal Taluka  Plot No 12,  12 Bommasandra - Jigani Link Road  
+y0=476.9, y1=489.0: 1.4  Emergency telephone
+y0=495.0, y1=519.2: Emergency Phone #  : 000 800 1007 141 (CHEMTREC)
+y0=519.3, y1=543.6: 
+y0=543.6, y1=573.9: SECTION 2: Hazards identification
+y0=580.0, y1=610.3: 2.1  Classification of the substance or mixture    Not a hazardous substance or 
+... bottom blocks ...
+y0=616.3, y1=628.4: 2.2  Label elements
+y0=634.6, y1=658.8: Not a hazardous substance or mixture according to Regulation (EC) No 1272/2008.
+y0=676.9, y1=729.7: Millipore- 1.00025  Page 1  of  12    The life science business of Merck operate
+y0=686.9, y1=696.7: 
+y0=749.4, y1=806.4: 
