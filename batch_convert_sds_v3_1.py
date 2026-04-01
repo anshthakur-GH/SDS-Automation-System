@@ -31,7 +31,31 @@ def apply_minimal_branding(doc_merck, template_path):
             "Revision Date"
         ]
         
+        # 1. Format all section headers globally with the Navy Blue background.
+        # We use strictly defined Line geometries rather than Blocks to prevent multi-line merging issues.
+        for block_dict in page.get_text("dict").get("blocks", []):
+            if "lines" in block_dict:
+                for line in block_dict["lines"]:
+                    line_text = "".join([span["text"] for span in line["spans"]]).strip()
+                    
+                    if line_text.startswith("SECTION ") and not line_text.startswith("SECTION 1:") and ":" in line_text and len(line_text) < 150:
+                        bbox = line["bbox"]  # Precise tight geometric box of JUST the text line: (x0, y0, x1, y1)
+                        
+                        # 1. Total Eradication: WIPE the original line exclusively with a white box.
+                        page.draw_rect(fitz.Rect(30, bbox[1] - 5, 570, bbox[3] + 5), color=(1,1,1), fill=(1,1,1))
+                        
+                        # 2. Draw perfectly calibrated 20px Navy box securely anchored to the line's top coordinate (y0)
+                        bg_rect = fitz.Rect(35, bbox[1] - 4, 560, bbox[1] + 16)
+                        page.draw_rect(bg_rect, color=RYZE_NAVY, fill=RYZE_NAVY)
+                        
+                        # 3. Insert pristine white text effortlessly inside the calibrated box
+                        text_rect = fitz.Rect(40, bbox[1] - 1, 550, bbox[1] + 16)
+                        page.insert_textbox(text_rect, line_text, fontfile=ARIAL_BOLD, fontsize=10, color=(1,1,1))
+        
+        # 2. Selective Footer Erasure
         for b in page.get_text("blocks"):
+            text = b[4].strip()
+            
             if b[1] > 650:
                 if any(p in b[4] for p in footer_patterns):
                     page.draw_rect(fitz.Rect(b[0], b[1], b[2], b[3]), color=(1,1,1), fill=(1,1,1))
