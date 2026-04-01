@@ -51,10 +51,10 @@ def generate_ryze_page1(data, template_path, output_path):
             return y + line_h
 
     curr_y = add_row("Product form", data.get("product_form", "Substance"), curr_y)
-    curr_y = add_row("Product name", data.get("product_name", ""), curr_y)
+    curr_y = add_row("Product name", "", curr_y)
     curr_y = add_row("Type of product", data.get("type_of_product", "Chemical"), curr_y)
     curr_y = add_row("Product Grades (Applicable)", data.get("product_grades", "AR/ACS, LR, HPLC,CERTIFIED DRY"), curr_y)
-    curr_y = add_row("Product Code", data.get("product_codes", []), curr_y)
+    curr_y = add_row("Product Code", "", curr_y)
     curr_y = add_row("CAS No", data.get("cas_no", ""), curr_y)
     curr_y = add_row("Molecular Formula", data.get("formula", ""), curr_y)
     curr_y = add_row("Molecular Weight (g/mol)", data.get("molecular_weight", ""), curr_y)
