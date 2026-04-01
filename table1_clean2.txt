@@ -1,0 +1,20 @@
+1.4. Emergency Telephone Number | 1.4. Emergency Telephone Number | 1.4. Emergency Telephone Number
++91- 99-3006-02-02 | : | 
+ |  | 
+ |  | 
+SECTION 2: Hazards Identification | SECTION 2: Hazards Identification | SECTION 2: Hazards Identification
+ |  | 
+2.1. Classification of the substance or mixture | 2.1. Classification of the substance or mixture | 2.1. Classification of the substance or mixture
+Classification according to Regulation (EC) No. 1272/2008 [CLP] | Classification according to Regulation (EC) No. 1272/2008 [CLP] | Classification according to Regulation (EC) No. 1272/2008 [CLP]
+Flammable liquids,  Category 3 | H226 | H226
+Acute toxicity (oral), Category 4 | H302 | H302
+Acute toxicity (dermal), Category 4 | H312 | H312
+Acute toxicity (inhal.), Category 4 | H332 | H332
+Serious eye damage/eye irritation, | H319 | H319
+Category 2 |  | 
+Full text of classification categories and H statements : see section 16 | Full text of classification categories and H statements : see section 16 | Full text of classification categories and H statements : see section 16
+ |  | 
+Classification according to Directive 67/548/EEC or 1999/45/EC | Classification according to Directive 67/548/EEC or 1999/45/EC | Classification according to Directive 67/548/EEC or 1999/45/EC
+F; R11 |  | 
+Xi; R36 |  | 
+R67 |  | 
